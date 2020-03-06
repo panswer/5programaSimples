@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    padding: 1em;
+    text-align: center;
+}
+
+.encabezado>.titulo {
+    text-decoration: underline;
+}
+
+
+/* MENU PRINCIPAL */
+
+.menu-principal {
+    background-color: #999999;
+    text-align: center;
+    list-style-type: none;
+}
+
+.menu-drawer-label {
+    position: absolute;
+    visibility: hidden;
+}
+
+#menu-drawer {
+    visibility: hidden;
+    position: absolute;
+}
+
+.menu-principal>ul {
+    list-style: none;
+    /* height: auto; */
+    display: flex;
+    justify-content: center;
+}
+
+.menu-principal .menu-principal-item {
+    margin-right: 1em;
+}
+
+.menu-principal-item>.menu-principal-link {
+    display: block;
+    padding: 5px;
+}
+
+.menu-principal-link:link {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-principal-link:visited {
+    color: #000;
+}
+
+.menu-principal-link:hover {
+    background-color: #888888;
+}
+
+
+/* CONTENIDO */
+
+.titulo {
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.articulo {
+    width: 250px;
+    height: 200px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+/* PIE DE PAGINA */
+
+.pie {
+    position: fixed;
+    background-color: #aaaaaa;
+    padding: 1em;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.pie:hover {
+    cursor: default;
+}
+
+
+/* RESPONSIVE para dispositivos */
+
+@media screen and (max-width: 548px) {
+    .menu-principal {
+        text-align: left;
+    }
+    .menu-drawer-label {
+        position: relative;
+        visibility: visible;
+        margin: 5px;
+    }
+    #menu-drawer {
+        visibility: hidden;
+        transition: 5s;
+    }
+    #menu-drawer:checked~ul {
+        height: 150px;
+    }
+    .menu-principal>ul {
+        flex-direction: column;
+        overflow: hidden;
+        height: 0px;
+        transition: height 2s;
+        position: relative;
+    }
+    .menu-principal .menu-principal-item {
+        display: flex;
+    }
+    .menu-principal-link:hover {
+        background-color: #ffffff !important;
+    }
+    .titulo {
+        margin-left: 0;
+        text-align: center;
+    }
+}
