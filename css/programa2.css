@@ -1,0 +1,12 @@
+:root {
+    --espacio: 50px;
+}
+
+.table-item {
+    border: 1px solid #000;
+    height: var(--espacio);
+    width: var(--espacio);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
